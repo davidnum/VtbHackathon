@@ -10,6 +10,7 @@ build/
 DerivedData/
 
 ## Various settings
+.DS_Store
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -43,6 +44,7 @@ playground.xcworkspace
 .build/
 
 # CocoaPods - Refactored to standalone file
+Pods/
 
 # Carthage - Refactored to standalone file
 
