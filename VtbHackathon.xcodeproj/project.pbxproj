@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C88F9672530EFBC00B82761 /* ScrollingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F9662530EFBC00B82761 /* ScrollingHStack.swift */; };
+		1C88F9672530EFBC00B82761 /* TabViewDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F9662530EFBC00B82761 /* TabViewDots.swift */; };
+		1C88F9842531145500B82761 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C88F9832531145500B82761 /* Colors.xcassets */; };
 		3C86B2F9977E2BB94E320C9C /* Pods_VtbHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03FE0A830798D2D0B06C99B /* Pods_VtbHackathon.framework */; };
 		D0045A4A7AAEED834CB519F4 /* Pods_VtbHackathon_VtbHackathonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5AE1137E3633D66B5029F /* Pods_VtbHackathon_VtbHackathonUITests.framework */; };
 		D21CE7193D1D4AE07FD25371 /* Pods_VtbHackathonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ECAFFF0B558875F32DA7F8 /* Pods_VtbHackathonTests.framework */; };
 		E496E76C2530A5BD00FBCBE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E76B2530A5BD00FBCBE4 /* AppDelegate.swift */; };
 		E496E76E2530A5BD00FBCBE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E76D2530A5BD00FBCBE4 /* SceneDelegate.swift */; };
-		E496E7702530A5BD00FBCBE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E76F2530A5BD00FBCBE4 /* ContentView.swift */; };
+		E496E7702530A5BD00FBCBE4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E76F2530A5BD00FBCBE4 /* MainScreen.swift */; };
 		E496E7732530A5BD00FBCBE4 /* VtbHackathon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E496E7712530A5BD00FBCBE4 /* VtbHackathon.xcdatamodeld */; };
 		E496E7752530A5BF00FBCBE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E496E7742530A5BF00FBCBE4 /* Assets.xcassets */; };
 		E496E7782530A5BF00FBCBE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E496E7772530A5BF00FBCBE4 /* Preview Assets.xcassets */; };
@@ -43,7 +44,8 @@
 		1044B9D9614681F9105CE8C2 /* Pods-VtbHackathon-VtbHackathonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathon-VtbHackathonUITests.release.xcconfig"; path = "Target Support Files/Pods-VtbHackathon-VtbHackathonUITests/Pods-VtbHackathon-VtbHackathonUITests.release.xcconfig"; sourceTree = "<group>"; };
 		10ECAFFF0B558875F32DA7F8 /* Pods_VtbHackathonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VtbHackathonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		170CE43537D284CDE88CD322 /* Pods-VtbHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathon.release.xcconfig"; path = "Target Support Files/Pods-VtbHackathon/Pods-VtbHackathon.release.xcconfig"; sourceTree = "<group>"; };
-		1C88F9662530EFBC00B82761 /* ScrollingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingHStack.swift; sourceTree = "<group>"; };
+		1C88F9662530EFBC00B82761 /* TabViewDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewDots.swift; sourceTree = "<group>"; };
+		1C88F9832531145500B82761 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		20F39DF49EDD403E27DD1F0B /* Pods-VtbHackathonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathonTests.release.xcconfig"; path = "Target Support Files/Pods-VtbHackathonTests/Pods-VtbHackathonTests.release.xcconfig"; sourceTree = "<group>"; };
 		36093E3E7EEFE063ECBEB9F9 /* Pods-VtbHackathon-VtbHackathonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathon-VtbHackathonUITests.debug.xcconfig"; path = "Target Support Files/Pods-VtbHackathon-VtbHackathonUITests/Pods-VtbHackathon-VtbHackathonUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		416841EFB1C653EBC2895382 /* Pods-VtbHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathon.debug.xcconfig"; path = "Target Support Files/Pods-VtbHackathon/Pods-VtbHackathon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		E496E7682530A5BD00FBCBE4 /* VtbHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VtbHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E496E76B2530A5BD00FBCBE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E496E76D2530A5BD00FBCBE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E496E76F2530A5BD00FBCBE4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E496E76F2530A5BD00FBCBE4 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		E496E7722530A5BD00FBCBE4 /* VtbHackathon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VtbHackathon.xcdatamodel; sourceTree = "<group>"; };
 		E496E7742530A5BF00FBCBE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E496E7772530A5BF00FBCBE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -105,6 +107,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1C88F98825311B7B00B82761 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C88F9662530EFBC00B82761 /* TabViewDots.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C88F98925311B9500B82761 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E496E76F2530A5BD00FBCBE4 /* MainScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		516A7C787FEF5B32406CFA8E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +133,6 @@
 				E0E02FA9BB2C045DD19FFA5A /* Pods-VtbHackathonTests.debug.xcconfig */,
 				20F39DF49EDD403E27DD1F0B /* Pods-VtbHackathonTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,15 +161,16 @@
 		E496E76A2530A5BD00FBCBE4 /* VtbHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				E496E7762530A5BF00FBCBE4 /* Preview Content */,
+				1C88F98925311B9500B82761 /* Screens */,
+				1C88F98825311B7B00B82761 /* Views */,
 				E496E76B2530A5BD00FBCBE4 /* AppDelegate.swift */,
 				E496E76D2530A5BD00FBCBE4 /* SceneDelegate.swift */,
-				E496E76F2530A5BD00FBCBE4 /* ContentView.swift */,
-				E496E7742530A5BF00FBCBE4 /* Assets.xcassets */,
 				E496E7792530A5BF00FBCBE4 /* LaunchScreen.storyboard */,
+				E496E7742530A5BF00FBCBE4 /* Assets.xcassets */,
+				1C88F9832531145500B82761 /* Colors.xcassets */,
 				E496E77C2530A5BF00FBCBE4 /* Info.plist */,
 				E496E7712530A5BD00FBCBE4 /* VtbHackathon.xcdatamodeld */,
-				E496E7762530A5BF00FBCBE4 /* Preview Content */,
-				1C88F9662530EFBC00B82761 /* ScrollingHStack.swift */,
 			);
 			path = VtbHackathon;
 			sourceTree = "<group>";
@@ -290,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E496E77B2530A5BF00FBCBE4 /* LaunchScreen.storyboard in Resources */,
+				1C88F9842531145500B82761 /* Colors.xcassets in Resources */,
 				E496E7782530A5BF00FBCBE4 /* Preview Assets.xcassets in Resources */,
 				E496E7752530A5BF00FBCBE4 /* Assets.xcassets in Resources */,
 			);
@@ -388,8 +407,8 @@
 				E496E76C2530A5BD00FBCBE4 /* AppDelegate.swift in Sources */,
 				E496E76E2530A5BD00FBCBE4 /* SceneDelegate.swift in Sources */,
 				E496E7732530A5BD00FBCBE4 /* VtbHackathon.xcdatamodeld in Sources */,
-				E496E7702530A5BD00FBCBE4 /* ContentView.swift in Sources */,
-				1C88F9672530EFBC00B82761 /* ScrollingHStack.swift in Sources */,
+				E496E7702530A5BD00FBCBE4 /* MainScreen.swift in Sources */,
+				1C88F9672530EFBC00B82761 /* TabViewDots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

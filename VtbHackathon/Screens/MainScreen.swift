@@ -7,13 +7,19 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainScreen: View {
     
-    enum Screen {
-        case Favorites, Main, Profile
+    enum Screen: Int {
+        case Favourites, Main, Profile
     }
     
+    let titles = [
+        Screen.Favourites: "Избранное",
+        Screen.Main: "Главная",
+        Screen.Profile: "Профиль",
+    ]
     let bounds = UIScreen.main.bounds
+    
     @State var currentScreen = Screen.Main
     
     init() {
@@ -25,37 +31,47 @@ struct ContentView: View {
     }
     
     var body: some View {
+        
         NavigationView {
-            TabView(selection: $currentScreen) {
-                // Favorites
+            TabView(selection: $currentScreen.animation()) {
+                // Favourites
                 VStack {
-                    Text("Favorites")
-                }.tag(Screen.Favorites)
+                    Text("Избранное")
+                }
+                
+                .tag(Screen.Favourites)
                 
                 // Main
                 VStack {
-                    Text("Нажмите, чтобы определить машину")
+                    Text("Нажмите, чтобы\nопределить машину")
                         .fontWeight(.semibold)
                         .font(.system(size: 22.0))
-                        .padding(.horizontal, 80)
+                        .padding(.horizontal, 30)
                         .padding(.bottom, 48)
                         .multilineTextAlignment(.center)
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                         Image("CameraButton")
                     }
-                    .animation(.easeInOut(duration: 0.4))
+                    .animation(.easeInOut(duration: 0.3))
                     .buttonStyle(ScaleButtonStyle())
-                }.tag(Screen.Main)
+                }
+                
+                .tag(Screen.Main)
+                
                 
                 // Profile
                 VStack {
-                    Text("Profile")
+                    Text("Профиль")
                 }
                 .tag(Screen.Profile)
             }
+            .padding(.bottom, 80)
             .tabViewStyle(PageTabViewStyle())
-            .navigationBarTitle("Хлавная", displayMode: .inline)
+            .overlay(TabViewDots(count: 3, currentIndex: currentScreen.rawValue), alignment: .bottom)
+            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
+            // .navigationBarTitle(titles[currentScreen]!, displayMode: .inline)
         }
+        
     }
 }
 
@@ -70,6 +86,6 @@ struct ScaleButtonStyle: ButtonStyle {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainScreen()
     }
 }
