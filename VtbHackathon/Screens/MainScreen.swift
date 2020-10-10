@@ -23,7 +23,7 @@ struct MainScreen: View {
     @State var currentScreen = Screen.Main
     
     var body: some View {
-        //NavigationView {
+        NavigationView {
             TabView(selection: $currentScreen.animation()) {
                 // Favorites
                 VStack {
@@ -62,7 +62,7 @@ struct MainScreen: View {
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
             .navigationBarTitle(titles[currentScreen] ?? "", displayMode: .inline)
             .overlay(TabViewDots(count: 3, currentIndex: currentScreen.rawValue), alignment: .top)
-        //}
+        }
     }
 }
 
