@@ -20,6 +20,11 @@ struct CustomSlider: View {
                     HStack {}
                         .frame(width: geometry.size.width, height: 2)
                         .background(Color("ColdGrey20"))
+                    HStack {}
+                        .frame(width: geometry.size.width / CGFloat(bounds.upperBound - 1) * CGFloat(value - 1), height: 4)
+                        .background(Color("Blue60"))
+                        .cornerRadius(2)
+                        .animation(.easeInOut(duration: 0.2))
                     ZStack {
                         Circle()
                             .fill(Color("Blue60"))
@@ -34,8 +39,8 @@ struct CustomSlider: View {
                     .offset(x: (CGFloat(value - 1)) * (geometry.size.width - 20) / CGFloat(bounds.upperBound - 1), y: 0)
                     .gesture(DragGesture(minimumDistance: 0)
                                 .onChanged({ v in
-                                    let parts = (geometry.size.width) / CGFloat(bounds.upperBound - 1)
-                                    value = Double(round(v.location.x / parts)) + max(0, bounds.lowerBound)
+                                    let partWidth = geometry.size.width / CGFloat(bounds.upperBound - 1)
+                                    value = Double(round(v.location.x / partWidth)) + max(0, bounds.lowerBound)
                                 })
                     )
                     .animation(.easeInOut(duration: 0.2))

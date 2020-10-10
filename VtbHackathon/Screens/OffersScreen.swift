@@ -23,7 +23,7 @@ struct OffersScreen: View {
     
     var body: some View {
         ScrollView {
-            ForEach(Array(brand.models.enumerated()), id: \.offset) { idx, model in
+            ForEach(Array(brand.models!.enumerated()), id: \.offset) { idx, model in
                 Pressable(action: {}) {
                     NavigationLink(destination: OfferDetailsScreen(model: model)) {
                         OfferRow(model: model)
@@ -31,7 +31,7 @@ struct OffersScreen: View {
                 }
                 .padding()
                 
-                if(idx < brand.models.count - 1) {
+                if(idx < brand.models!.count - 1) {
                     HStack {}
                         .fullSize()
                         .frame(height: 8)

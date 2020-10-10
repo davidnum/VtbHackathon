@@ -16,11 +16,12 @@ struct PrimaryButton: View {
     
     var body: some View {
         Pressable(action: action) {
-            VStack {
+            HStack {
                 Text(text)
                     .foregroundColor(.white)
                     .font(.system(size: 16))
             }
+            .fullSize()
             .padding(.all, 14)
             .background(Color("Blue60"))
             .cornerRadius(8)

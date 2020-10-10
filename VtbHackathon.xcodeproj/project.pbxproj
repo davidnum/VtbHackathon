@@ -14,6 +14,10 @@
 		1C2FFEF32532237800532FDB /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFEF22532237800532FDB /* FloatingTextField.swift */; };
 		1C2FFEFB25322E5A00532FDB /* CreditSummaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFEFA25322E5A00532FDB /* CreditSummaryItem.swift */; };
 		1C2FFF002532316E00532FDB /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFEFF2532316E00532FDB /* PrimaryButton.swift */; };
+		1C7C0FA925325CBF0029D326 /* CalculatorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C0FA825325CBF0029D326 /* CalculatorSettings.swift */; };
+		1C7C0FAE25325D600029D326 /* SpecialCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C0FAD25325D600029D326 /* SpecialCondition.swift */; };
+		1C7C0FB325325DF00029D326 /* CalculatorVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C0FB225325DF00029D326 /* CalculatorVariant.swift */; };
+		1C7C0FB8253260140029D326 /* CustomCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C0FB7253260140029D326 /* CustomCheckbox.swift */; };
 		1C88F9672530EFBC00B82761 /* TabViewDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F9662530EFBC00B82761 /* TabViewDots.swift */; };
 		1C88F9842531145500B82761 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C88F9832531145500B82761 /* Colors.xcassets */; };
 		1C88F98E25311F6700B82761 /* OffersScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F98D25311F6700B82761 /* OffersScreen.swift */; };
@@ -68,6 +72,10 @@
 		1C2FFEF22532237800532FDB /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		1C2FFEFA25322E5A00532FDB /* CreditSummaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditSummaryItem.swift; sourceTree = "<group>"; };
 		1C2FFEFF2532316E00532FDB /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		1C7C0FA825325CBF0029D326 /* CalculatorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSettings.swift; sourceTree = "<group>"; };
+		1C7C0FAD25325D600029D326 /* SpecialCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCondition.swift; sourceTree = "<group>"; };
+		1C7C0FB225325DF00029D326 /* CalculatorVariant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVariant.swift; sourceTree = "<group>"; };
+		1C7C0FB7253260140029D326 /* CustomCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCheckbox.swift; sourceTree = "<group>"; };
 		1C88F9662530EFBC00B82761 /* TabViewDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewDots.swift; sourceTree = "<group>"; };
 		1C88F9832531145500B82761 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1C88F98D25311F6700B82761 /* OffersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersScreen.swift; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 				1C2FFEF22532237800532FDB /* FloatingTextField.swift */,
 				1C2FFEFA25322E5A00532FDB /* CreditSummaryItem.swift */,
 				1C2FFEFF2532316E00532FDB /* PrimaryButton.swift */,
+				1C7C0FB7253260140029D326 /* CustomCheckbox.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,6 +289,9 @@
 				E4CA1AEB2531CD53002CE616 /* CarBrandDataModel.swift */,
 				E4CA1AF92531DE9A002CE616 /* CarModelDataModel.swift */,
 				E4CA1AFE2531DED3002CE616 /* BodyDataModel.swift */,
+				1C7C0FA825325CBF0029D326 /* CalculatorSettings.swift */,
+				1C7C0FAD25325D600029D326 /* SpecialCondition.swift */,
+				1C7C0FB225325DF00029D326 /* CalculatorVariant.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -526,12 +538,14 @@
 				E4CA1B172531FEE5002CE616 /* SplashScreen.swift in Sources */,
 				E4CA1AE72531CD31002CE616 /* CountryDataModel.swift in Sources */,
 				E4CA1AFF2531DED3002CE616 /* BodyDataModel.swift in Sources */,
+				1C7C0FB8253260140029D326 /* CustomCheckbox.swift in Sources */,
 				E4CA1B122531FA99002CE616 /* ApiService.swift in Sources */,
 				E496E76C2530A5BD00FBCBE4 /* AppDelegate.swift in Sources */,
 				1C2FFEDF2531DA7C00532FDB /* CarParameter.swift in Sources */,
 				E496E76E2530A5BD00FBCBE4 /* SceneDelegate.swift in Sources */,
 				1C88F98E25311F6700B82761 /* OffersScreen.swift in Sources */,
 				1C2FFED52531D27300532FDB /* Pressable.swift in Sources */,
+				1C7C0FB325325DF00029D326 /* CalculatorVariant.swift in Sources */,
 				1CDDBB9C25313F5500551D20 /* Extensions.swift in Sources */,
 				E4CA1B072531F45D002CE616 /* SplashViewModel.swift in Sources */,
 				1C2FFEDA2531D8A000532FDB /* OfferDetailsScreen.swift in Sources */,
@@ -540,7 +554,9 @@
 				E496E7732530A5BD00FBCBE4 /* VtbHackathon.xcdatamodeld in Sources */,
 				E4CA1AFA2531DE9A002CE616 /* CarModelDataModel.swift in Sources */,
 				E496E7702530A5BD00FBCBE4 /* MainScreen.swift in Sources */,
+				1C7C0FAE25325D600029D326 /* SpecialCondition.swift in Sources */,
 				1C2FFEFB25322E5A00532FDB /* CreditSummaryItem.swift in Sources */,
+				1C7C0FA925325CBF0029D326 /* CalculatorSettings.swift in Sources */,
 				1C2FFEEB2531F53B00532FDB /* CustomSlider.swift in Sources */,
 				1C2FFF002532316E00532FDB /* PrimaryButton.swift in Sources */,
 				1C2FFEF32532237800532FDB /* FloatingTextField.swift in Sources */,

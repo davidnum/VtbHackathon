@@ -10,18 +10,16 @@ import URLImage
 
 struct OfferRow: View {
     
-    
-    
     var model: CarModelDataModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: nil) {
-            Text("Kia Optima IV Рестайлинг, 2016, Седан")
+            Text("\(model.brand.titleRus) \(model.titleRus) \(model.ownTitle)")
                 .fontWeight(.regular)
                 .font(.system(size: 18.0))
                 .foregroundColor(Color("Grey90"))
             
-            Text("от \(model.minPrice) ₽")
+            Text("от \(model.minPrice.formattedWithSeparator) ₽")
                 .font(.system(size: 22.0))
                 .foregroundColor(Color("Grey90"))
                 .fontWeight(.bold)

@@ -27,6 +27,7 @@ struct CarParameter: View {
             Text(text)
                 .foregroundColor(Color("Grey90"))
                 .font(.system(size: 14.0))
+                .fixedSize(horizontal: false, vertical: true)
         }
         .frame(alignment: .topLeading)
     }

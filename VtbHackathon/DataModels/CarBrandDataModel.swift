@@ -19,5 +19,5 @@ struct CarBrandDataModel: Decodable {
 
 	let absentee: Bool
 
-	let models: [CarModelDataModel]
+	let models: [CarModelDataModel]?
 }

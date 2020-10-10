@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OfferDetailsScreen: View {
     
-    @State var creditTerm: Double = 1
+    @State var creditTerm: Double = 5
     @State var initialFee: String = ""
     
     var model: CarModelDataModel
@@ -19,18 +19,21 @@ struct OfferDetailsScreen: View {
             VStack(alignment: .leading, spacing: nil) {
                 OfferRow(model: model)
                     .padding(.bottom)
-                HStack {
-                    CarParameter(label: "Год выпуска", text: "2016")
-                        .fullSize(alignment: .leading)
-                    CarParameter(label: "Тип кузова", text: "Седан")
-                        .fullSize(alignment: .leading)
-                }
-                .padding(.bottom)
-                HStack {
-                    CarParameter(label: "Количество цветов", text: "4")
-                        .fullSize(alignment: .leading)
-                }
-                .padding(.bottom)
+                
+                CarParameter(label: "Типы кузова", text: model.bodies
+                                .map { $0.title }
+                                .joined(separator: ", "))
+                    .fullSize(alignment: .leading)
+                    .padding(.bottom)
+                
+                CarParameter(label: "Год выпуска", text: "2016")
+                    .fullSize(alignment: .leading)
+                    .padding(.bottom)
+                
+                CarParameter(label: "Количество цветов", text: "\(model.colorsCount)")
+                    .fullSize(alignment: .leading)
+                    .padding(.bottom)
+                
                 
                 Pressable(action: {}) {
                     HStack {
@@ -59,7 +62,7 @@ struct OfferDetailsScreen: View {
                     .fullSize(alignment: .leading)
                 
                 VStack {
-                    Text("Срок кредита (от 1 года до 5)")
+                    Text("Срок кредита (от 1 года до 7)")
                         .foregroundColor(Color("Grey50"))
                         .font(.system(size: 14.0))
                         .padding(.bottom, 1)
@@ -68,7 +71,7 @@ struct OfferDetailsScreen: View {
                         .foregroundColor(Color("Grey90"))
                         .font(.system(size: 16.0))
                         .fullSize(alignment: .leading)
-                    CustomSlider(value: $creditTerm, bounds: 1...5, step: 1)
+                    CustomSlider(value: $creditTerm, bounds: 1...7, step: 1)
                         .padding(.bottom, 60)
                 }
                 
@@ -77,7 +80,7 @@ struct OfferDetailsScreen: View {
                 
                 HStack {
                     CreditSummaryItem(label: "Ставка по кредиту", text: "2%")
-                        
+                    
                     CreditSummaryItem(label: "Сумма кредита", text: "1 356 000 ₽")
                 }
                 .padding(.top, 24)
@@ -91,6 +94,6 @@ struct OfferDetailsScreen: View {
             }
             .padding()
         }
-        .navigationBarTitle("Kia Optima", displayMode: .inline)
+        .navigationBarTitle("\(model.brand.titleRus) \(model.titleRus)", displayMode: .inline)
     }
 }
