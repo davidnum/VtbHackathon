@@ -69,7 +69,7 @@ struct MainScreen: View {
             .tabViewStyle(PageTabViewStyle())
             .overlay(TabViewDots(count: 3, currentIndex: currentScreen.rawValue), alignment: .bottom)
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
-            // .navigationBarTitle(titles[currentScreen]!, displayMode: .inline)
+            //.navigationBarTitle(titles[currentScreen] ?? "", displayMode: .inline)
 		}.onAppear {
 			UIScrollView.appearance().bounces = false
 		}

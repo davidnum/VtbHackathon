@@ -21,6 +21,9 @@
 		E496E77B2530A5BF00FBCBE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E496E7792530A5BF00FBCBE4 /* LaunchScreen.storyboard */; };
 		E496E7862530A5C000FBCBE4 /* VtbHackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E7852530A5C000FBCBE4 /* VtbHackathonTests.swift */; };
 		E496E7912530A5C000FBCBE4 /* VtbHackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E7902530A5C000FBCBE4 /* VtbHackathonUITests.swift */; };
+		E4CA1AB125319925002CE616 /* OffersScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1AB025319925002CE616 /* OffersScreen.swift */; };
+		E4CA1AB725319948002CE616 /* OffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1AB625319948002CE616 /* OffersViewModel.swift */; };
+		E4CA1ABF25319D8C002CE616 /* OfferRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1ABE25319D8C002CE616 /* OfferRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		E496E78C2530A5C000FBCBE4 /* VtbHackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VtbHackathonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E496E7902530A5C000FBCBE4 /* VtbHackathonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VtbHackathonUITests.swift; sourceTree = "<group>"; };
 		E496E7922530A5C000FBCBE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4CA1AB025319925002CE616 /* OffersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersScreen.swift; sourceTree = "<group>"; };
+		E4CA1AB625319948002CE616 /* OffersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewModel.swift; sourceTree = "<group>"; };
+		E4CA1ABE25319D8C002CE616 /* OfferRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				1C88F9662530EFBC00B82761 /* TabViewDots.swift */,
+				E4CA1ABE25319D8C002CE616 /* OfferRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				E496E76F2530A5BD00FBCBE4 /* MainScreen.swift */,
+				E4CA1AB025319925002CE616 /* OffersScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 		E496E76A2530A5BD00FBCBE4 /* VtbHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				E4CA1AB525319936002CE616 /* ViewModels */,
 				E496E7762530A5BF00FBCBE4 /* Preview Content */,
 				1C88F98925311B9500B82761 /* Screens */,
 				1C88F98825311B7B00B82761 /* Views */,
@@ -199,6 +208,14 @@
 				E496E7922530A5C000FBCBE4 /* Info.plist */,
 			);
 			path = VtbHackathonUITests;
+			sourceTree = "<group>";
+		};
+		E4CA1AB525319936002CE616 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E4CA1AB625319948002CE616 /* OffersViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +423,9 @@
 			files = (
 				E496E76C2530A5BD00FBCBE4 /* AppDelegate.swift in Sources */,
 				E496E76E2530A5BD00FBCBE4 /* SceneDelegate.swift in Sources */,
+				E4CA1AB125319925002CE616 /* OffersScreen.swift in Sources */,
+				E4CA1ABF25319D8C002CE616 /* OfferRow.swift in Sources */,
+				E4CA1AB725319948002CE616 /* OffersViewModel.swift in Sources */,
 				E496E7732530A5BD00FBCBE4 /* VtbHackathon.xcdatamodeld in Sources */,
 				E496E7702530A5BD00FBCBE4 /* MainScreen.swift in Sources */,
 				1C88F9672530EFBC00B82761 /* TabViewDots.swift in Sources */,
