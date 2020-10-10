@@ -7,6 +7,8 @@ target 'VtbHackathon' do
 
   # Pods for VtbHackathon
   pod 'URLImage'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 
   target 'VtbHackathonTests' do
     inherit! :search_paths
