@@ -22,6 +22,8 @@ struct MainScreen: View {
     
     @State var currentScreen = Screen.Main
     
+    var brand: CarBrandDataModel
+    
     var body: some View {
         NavigationView {
             TabView(selection: $currentScreen.animation()) {
@@ -42,7 +44,7 @@ struct MainScreen: View {
                         .multilineTextAlignment(.center)
                     
                     Pressable(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        NavigationLink(destination: OffersScreen()) {
+                        NavigationLink(destination: OffersScreen(brand: brand)) {
                             Image("CameraButton")
                         }
                         .buttonStyle(PlainButtonStyle())
@@ -67,10 +69,10 @@ struct MainScreen: View {
 }
 
 
-struct MainScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MainScreen()
-        }
-    }
-}
+//struct MainScreen_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            MainScreen()
+//        }
+//    }
+//}

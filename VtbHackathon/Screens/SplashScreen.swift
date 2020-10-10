@@ -24,7 +24,9 @@ struct SplashScreen: View {
 			VStack {
 					Text("")
 				ProgressView()
-			}.fullScreenCover(isPresented: $viewModel.navigated, content: MainScreen.init)
+            }.fullScreenCover(isPresented: $viewModel.navigated) {
+                MainScreen(brand: viewModel.cars[0])
+            }
 			.onAppear {
 				viewModel.getCars()
 			}

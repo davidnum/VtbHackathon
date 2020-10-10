@@ -175,13 +175,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		1C88F9B92531262F00B82761 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		516A7C787FEF5B32406CFA8E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,7 +219,6 @@
 				E496E7762530A5BF00FBCBE4 /* Preview Content */,
 				1C88F98925311B9500B82761 /* Screens */,
 				1C88F9A22531216700B82761 /* Utils */,
-				1C88F9B92531262F00B82761 /* ViewModels */,
 				1C88F98825311B7B00B82761 /* Views */,
 				E496E76B2530A5BD00FBCBE4 /* AppDelegate.swift */,
 				E496E76D2530A5BD00FBCBE4 /* SceneDelegate.swift */,

@@ -12,10 +12,12 @@ struct OfferDetailsScreen: View {
     @State var creditTerm: Double = 1
     @State var initialFee: String = ""
     
+    var model: CarModelDataModel
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: nil) {
-                OfferRow()
+                OfferRow(model: model)
                     .padding(.bottom)
                 HStack {
                     CarParameter(label: "Год выпуска", text: "2016")
@@ -90,11 +92,5 @@ struct OfferDetailsScreen: View {
             .padding()
         }
         .navigationBarTitle("Kia Optima", displayMode: .inline)
-    }
-}
-
-struct OfferDetailsScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        OfferDetailsScreen()
     }
 }

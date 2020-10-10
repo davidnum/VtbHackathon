@@ -9,27 +9,29 @@ import SwiftUI
 
 struct OffersScreen: View {
     
-    let data = ["1", "2", "3", "4"]
+    var brand: CarBrandDataModel
     
-    init() {
+    init(brand: CarBrandDataModel) {
         let appearance = UINavigationBarAppearance()
         appearance.shadowColor = .clear
         appearance.backgroundColor = .white
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
+        self.brand = brand
     }
     
     var body: some View {
         ScrollView {
-            ForEach(Array(data.enumerated()), id: \.offset) { idx, _ in
+            ForEach(Array(brand.models.enumerated()), id: \.offset) { idx, model in
                 Pressable(action: {}) {
-                    NavigationLink(destination: OfferDetailsScreen()) {
-                        OfferRow()
+                    NavigationLink(destination: OfferDetailsScreen(model: model)) {
+                        OfferRow(model: model)
                     }.buttonStyle(PlainButtonStyle())
                 }
                 .padding()
                 
-                if(idx < data.count - 1) {
+                if(idx < brand.models.count - 1) {
                     HStack {}
                         .fullSize()
                         .frame(height: 8)
@@ -38,12 +40,6 @@ struct OffersScreen: View {
             }
         }
         .navigationBarTitle("15 предложений", displayMode: .inline)
-    }
-}
-
-struct OffersScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        OffersScreen()
     }
 }
 

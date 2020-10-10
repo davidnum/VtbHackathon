@@ -8,6 +8,8 @@
 import Foundation
 
 struct CarModelDataModel: Decodable {
+    
+    let id: Int
 
 	let specmetallicPay: Int
 
@@ -20,4 +22,7 @@ struct CarModelDataModel: Decodable {
 	let absentee: Bool
 
 	let pearlPay: Int
+    
+    let minPrice: Int
+    
 }
