@@ -6,6 +6,7 @@ target 'VtbHackathon' do
   use_frameworks!
 
   # Pods for VtbHackathon
+  pod 'URLImage'
 
   target 'VtbHackathonTests' do
     inherit! :search_paths

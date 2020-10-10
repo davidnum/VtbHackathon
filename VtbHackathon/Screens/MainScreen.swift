@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainScreen: View {
-    
+
     enum Screen: Int {
         case Favorites, Main, Profile
     }
@@ -22,16 +22,7 @@ struct MainScreen: View {
     
     @State var currentScreen = Screen.Main
     
-    init() {
-        let appearance = UINavigationBarAppearance()
-        appearance.shadowColor = .clear
-        appearance.backgroundColor = .white
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    }
-    
     var body: some View {
-        
         NavigationView {
             TabView(selection: $currentScreen.animation()) {
                 // Favorites
@@ -86,8 +77,10 @@ struct ScaleButtonStyle: ButtonStyle {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct MainScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen()
+        Group {
+            MainScreen()
+        }
     }
 }

@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1C88F9672530EFBC00B82761 /* TabViewDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F9662530EFBC00B82761 /* TabViewDots.swift */; };
 		1C88F9842531145500B82761 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C88F9832531145500B82761 /* Colors.xcassets */; };
+		1C88F98E25311F6700B82761 /* OffersScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F98D25311F6700B82761 /* OffersScreen.swift */; };
+		1C88F9B52531238B00B82761 /* OfferRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F9B42531238B00B82761 /* OfferRow.swift */; };
+		1CDDBB9C25313F5500551D20 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDDBB9B25313F5500551D20 /* Extensions.swift */; };
 		3C86B2F9977E2BB94E320C9C /* Pods_VtbHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03FE0A830798D2D0B06C99B /* Pods_VtbHackathon.framework */; };
 		D0045A4A7AAEED834CB519F4 /* Pods_VtbHackathon_VtbHackathonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5AE1137E3633D66B5029F /* Pods_VtbHackathon_VtbHackathonUITests.framework */; };
 		D21CE7193D1D4AE07FD25371 /* Pods_VtbHackathonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ECAFFF0B558875F32DA7F8 /* Pods_VtbHackathonTests.framework */; };
@@ -49,6 +52,9 @@
 		170CE43537D284CDE88CD322 /* Pods-VtbHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathon.release.xcconfig"; path = "Target Support Files/Pods-VtbHackathon/Pods-VtbHackathon.release.xcconfig"; sourceTree = "<group>"; };
 		1C88F9662530EFBC00B82761 /* TabViewDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewDots.swift; sourceTree = "<group>"; };
 		1C88F9832531145500B82761 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		1C88F98D25311F6700B82761 /* OffersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersScreen.swift; sourceTree = "<group>"; };
+		1C88F9B42531238B00B82761 /* OfferRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRow.swift; sourceTree = "<group>"; };
+		1CDDBB9B25313F5500551D20 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		20F39DF49EDD403E27DD1F0B /* Pods-VtbHackathonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathonTests.release.xcconfig"; path = "Target Support Files/Pods-VtbHackathonTests/Pods-VtbHackathonTests.release.xcconfig"; sourceTree = "<group>"; };
 		36093E3E7EEFE063ECBEB9F9 /* Pods-VtbHackathon-VtbHackathonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathon-VtbHackathonUITests.debug.xcconfig"; path = "Target Support Files/Pods-VtbHackathon-VtbHackathonUITests/Pods-VtbHackathon-VtbHackathonUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		416841EFB1C653EBC2895382 /* Pods-VtbHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathon.debug.xcconfig"; path = "Target Support Files/Pods-VtbHackathon/Pods-VtbHackathon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				1C88F9662530EFBC00B82761 /* TabViewDots.swift */,
-				E4CA1ABE25319D8C002CE616 /* OfferRow.swift */,
+				1C88F9B42531238B00B82761 /* OfferRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,9 +132,24 @@
 			isa = PBXGroup;
 			children = (
 				E496E76F2530A5BD00FBCBE4 /* MainScreen.swift */,
-				E4CA1AB025319925002CE616 /* OffersScreen.swift */,
+				1C88F98D25311F6700B82761 /* OffersScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		1C88F9A22531216700B82761 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1CDDBB9B25313F5500551D20 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1C88F9B92531262F00B82761 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		516A7C787FEF5B32406CFA8E /* Pods */ = {
@@ -172,6 +193,8 @@
 				E4CA1AB525319936002CE616 /* ViewModels */,
 				E496E7762530A5BF00FBCBE4 /* Preview Content */,
 				1C88F98925311B9500B82761 /* Screens */,
+				1C88F9A22531216700B82761 /* Utils */,
+				1C88F9B92531262F00B82761 /* ViewModels */,
 				1C88F98825311B7B00B82761 /* Views */,
 				E496E76B2530A5BD00FBCBE4 /* AppDelegate.swift */,
 				E496E76D2530A5BD00FBCBE4 /* SceneDelegate.swift */,
@@ -229,6 +252,7 @@
 				E496E7642530A5BD00FBCBE4 /* Sources */,
 				E496E7652530A5BD00FBCBE4 /* Frameworks */,
 				E496E7662530A5BD00FBCBE4 /* Resources */,
+				EE6ED04857D5687D11512FEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +290,7 @@
 				E496E7882530A5C000FBCBE4 /* Sources */,
 				E496E7892530A5C000FBCBE4 /* Frameworks */,
 				E496E78A2530A5C000FBCBE4 /* Resources */,
+				9EF9AFE3B1418CBFA7C3A7E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,6 +395,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9EF9AFE3B1418CBFA7C3A7E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VtbHackathon-VtbHackathonUITests/Pods-VtbHackathon-VtbHackathonUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VtbHackathon-VtbHackathonUITests/Pods-VtbHackathon-VtbHackathonUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VtbHackathon-VtbHackathonUITests/Pods-VtbHackathon-VtbHackathonUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A5F3D5E80FE2F5210E2A1552 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,6 +456,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EE6ED04857D5687D11512FEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VtbHackathon/Pods-VtbHackathon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VtbHackathon/Pods-VtbHackathon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VtbHackathon/Pods-VtbHackathon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -423,9 +482,9 @@
 			files = (
 				E496E76C2530A5BD00FBCBE4 /* AppDelegate.swift in Sources */,
 				E496E76E2530A5BD00FBCBE4 /* SceneDelegate.swift in Sources */,
-				E4CA1AB125319925002CE616 /* OffersScreen.swift in Sources */,
-				E4CA1ABF25319D8C002CE616 /* OfferRow.swift in Sources */,
-				E4CA1AB725319948002CE616 /* OffersViewModel.swift in Sources */,
+				1C88F98E25311F6700B82761 /* OffersScreen.swift in Sources */,
+				1CDDBB9C25313F5500551D20 /* Extensions.swift in Sources */,
+				1C88F9B52531238B00B82761 /* OfferRow.swift in Sources */,
 				E496E7732530A5BD00FBCBE4 /* VtbHackathon.xcdatamodeld in Sources */,
 				E496E7702530A5BD00FBCBE4 /* MainScreen.swift in Sources */,
 				1C88F9672530EFBC00B82761 /* TabViewDots.swift in Sources */,
