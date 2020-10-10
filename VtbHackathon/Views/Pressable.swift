@@ -31,6 +31,7 @@ struct Pressable<Content: View>: View {
                 self.pressed = pressing
             }
         }, perform: { })
+
         .buttonStyle(PressableStyle())
     }
 }

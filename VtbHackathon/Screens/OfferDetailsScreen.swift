@@ -10,6 +10,7 @@ import SwiftUI
 struct OfferDetailsScreen: View {
     
     @State var creditTerm: Double = 1
+    @State var initialFee: String = ""
     
     var body: some View {
         ScrollView {
@@ -47,13 +48,14 @@ struct OfferDetailsScreen: View {
                 .frame(height: 8)
                 .background(Color("ColdGrey5"))
             
-            VStack() {
+            VStack(spacing: 0) {
                 Text("Рассчитайте кредит на это авто")
                     .foregroundColor(Color("Grey90"))
                     .fontWeight(.semibold)
                     .font(.system(size: 18.0))
                     .padding(.bottom)
                     .fullSize(alignment: .leading)
+                
                 VStack {
                     Text("Срок кредита (от 1 года до 5)")
                         .foregroundColor(Color("Grey50"))
@@ -64,17 +66,26 @@ struct OfferDetailsScreen: View {
                         .foregroundColor(Color("Grey90"))
                         .font(.system(size: 16.0))
                         .fullSize(alignment: .leading)
-                    ZStack(alignment: .leading) {
-                        Slider(value: $creditTerm, in: 1...5, step: 1)
-                        Circle()
-                            .fill(Color("Blue60"))
-                            .frame(width: 10, height: 10)
-                            .cornerRadius(5)
-                            .offset(x: (CGFloat(creditTerm) - 1) * 100, y: 0)
-                    }
-                    
-                       
+                    CustomSlider(value: $creditTerm, bounds: 1...5, step: 1)
+                        .padding(.bottom, 60)
                 }
+                
+                FloatingTextField(label: "Первоначальный взнос", value: $initialFee, text: "Это 20% от суммы")
+                    .keyboardType(.numberPad)
+                
+                HStack {
+                    CreditSummaryItem(label: "Ставка по кредиту", text: "2%")
+                        
+                    CreditSummaryItem(label: "Сумма кредита", text: "1 356 000 ₽")
+                }
+                .padding(.top, 24)
+                
+                CreditSummaryItem(label: "Ежемесячный платеж", text: "57 755 ₽")
+                    .padding(.top, 24)
+                
+                PrimaryButton(text: "Оформить заявку", action: {})
+                    .padding(.top, 24)
+                
             }
             .padding()
         }

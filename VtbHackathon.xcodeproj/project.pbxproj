@@ -10,6 +10,10 @@
 		1C2FFED52531D27300532FDB /* Pressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFED42531D27300532FDB /* Pressable.swift */; };
 		1C2FFEDA2531D8A000532FDB /* OfferDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFED92531D8A000532FDB /* OfferDetailsScreen.swift */; };
 		1C2FFEDF2531DA7C00532FDB /* CarParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFEDE2531DA7C00532FDB /* CarParameter.swift */; };
+		1C2FFEEB2531F53B00532FDB /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFEEA2531F53B00532FDB /* CustomSlider.swift */; };
+		1C2FFEF32532237800532FDB /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFEF22532237800532FDB /* FloatingTextField.swift */; };
+		1C2FFEFB25322E5A00532FDB /* CreditSummaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFEFA25322E5A00532FDB /* CreditSummaryItem.swift */; };
+		1C2FFF002532316E00532FDB /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFEFF2532316E00532FDB /* PrimaryButton.swift */; };
 		1C88F9672530EFBC00B82761 /* TabViewDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F9662530EFBC00B82761 /* TabViewDots.swift */; };
 		1C88F9842531145500B82761 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C88F9832531145500B82761 /* Colors.xcassets */; };
 		1C88F98E25311F6700B82761 /* OffersScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F98D25311F6700B82761 /* OffersScreen.swift */; };
@@ -60,6 +64,10 @@
 		1C2FFED42531D27300532FDB /* Pressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pressable.swift; sourceTree = "<group>"; };
 		1C2FFED92531D8A000532FDB /* OfferDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsScreen.swift; sourceTree = "<group>"; };
 		1C2FFEDE2531DA7C00532FDB /* CarParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarParameter.swift; sourceTree = "<group>"; };
+		1C2FFEEA2531F53B00532FDB /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		1C2FFEF22532237800532FDB /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		1C2FFEFA25322E5A00532FDB /* CreditSummaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditSummaryItem.swift; sourceTree = "<group>"; };
+		1C2FFEFF2532316E00532FDB /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		1C88F9662530EFBC00B82761 /* TabViewDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewDots.swift; sourceTree = "<group>"; };
 		1C88F9832531145500B82761 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1C88F98D25311F6700B82761 /* OffersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersScreen.swift; sourceTree = "<group>"; };
@@ -140,6 +148,10 @@
 				1C88F9B42531238B00B82761 /* OfferRow.swift */,
 				1C2FFED42531D27300532FDB /* Pressable.swift */,
 				1C2FFEDE2531DA7C00532FDB /* CarParameter.swift */,
+				1C2FFEEA2531F53B00532FDB /* CustomSlider.swift */,
+				1C2FFEF22532237800532FDB /* FloatingTextField.swift */,
+				1C2FFEFA25322E5A00532FDB /* CreditSummaryItem.swift */,
+				1C2FFEFF2532316E00532FDB /* PrimaryButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -536,6 +548,10 @@
 				E496E7732530A5BD00FBCBE4 /* VtbHackathon.xcdatamodeld in Sources */,
 				E4CA1AFA2531DE9A002CE616 /* CarModelDataModel.swift in Sources */,
 				E496E7702530A5BD00FBCBE4 /* MainScreen.swift in Sources */,
+				1C2FFEFB25322E5A00532FDB /* CreditSummaryItem.swift in Sources */,
+				1C2FFEEB2531F53B00532FDB /* CustomSlider.swift in Sources */,
+				1C2FFF002532316E00532FDB /* PrimaryButton.swift in Sources */,
+				1C2FFEF32532237800532FDB /* FloatingTextField.swift in Sources */,
 				1C88F9672530EFBC00B82761 /* TabViewDots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
