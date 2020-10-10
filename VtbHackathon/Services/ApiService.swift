@@ -41,7 +41,16 @@ final class ApiService: ApiServiceProtocol {
 		}
 	}
 
+<<<<<<< HEAD
 	func recognizeCar(by image: String, completion: @escaping (Result<[String: [String: Double]], Error>) -> Void) {
+=======
+	func recognizeCar(by image: String, completion: @escaping (Result<[String: Double], Error>) -> Void) {
+		let headers: HTTPHeaders = [
+			"x-ibm-client-id": "e0a9ee9438e7c78ec75742a2c331422f",
+			"Accept": "application/json",
+			"Content-Type": "application/json"
+		]
+>>>>>>> 6870c5c... поправил ошибку
 		AF.request("https://gw.hackathon.vtb.ru/vtb/hackathon/car-recognize",
 				   method: .post,
 				   parameters: ["content": image],
@@ -51,7 +60,11 @@ final class ApiService: ApiServiceProtocol {
                         completion(.failure(response.error!))
 						return
 					}
+<<<<<<< HEAD
 					// completion(.success(probabilities["probabilities"]?.sorted(by: response.value > $1.value)))
+=======
+					completion(.success(probabilities["probabilities"] ?? [:]))
+>>>>>>> 6870c5c... поправил ошибку
 				}
 	}
 
