@@ -10,11 +10,11 @@ import SwiftUI
 struct MainScreen: View {
     
     enum Screen: Int {
-        case Favourites, Main, Profile
+        case Favorites, Main, Profile
     }
     
     let titles = [
-        Screen.Favourites: "Избранное",
+        Screen.Favorites: "Избранное",
         Screen.Main: "Главная",
         Screen.Profile: "Профиль",
     ]
@@ -34,12 +34,12 @@ struct MainScreen: View {
         
         NavigationView {
             TabView(selection: $currentScreen.animation()) {
-                // Favourites
+                // Favorites
                 VStack {
                     Text("Избранное")
                 }
                 
-                .tag(Screen.Favourites)
+                .tag(Screen.Favorites)
                 
                 // Main
                 VStack {
@@ -54,7 +54,7 @@ struct MainScreen: View {
                     }
                     .animation(.easeInOut(duration: 0.3))
                     .buttonStyle(ScaleButtonStyle())
-                }
+				}
                 
                 .tag(Screen.Main)
                 
@@ -70,7 +70,9 @@ struct MainScreen: View {
             .overlay(TabViewDots(count: 3, currentIndex: currentScreen.rawValue), alignment: .bottom)
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
             // .navigationBarTitle(titles[currentScreen]!, displayMode: .inline)
-        }
+		}.onAppear {
+			UIScrollView.appearance().bounces = false
+		}
         
     }
 }
