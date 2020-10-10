@@ -20,22 +20,24 @@ struct OffersScreen: View {
     }
     
     var body: some View {
-        NavigationView {
-            VStack {
-                ScrollView {
-                    ForEach(data, id: \.self) { _ in
-                        ZStack {
-                            OfferRow()
-                        }
-                        .background(Color.white)
-                    }
-                    .lineSpacing(8.0)
+        ScrollView {
+            ForEach(Array(data.enumerated()), id: \.offset) { idx, _ in
+                Pressable(action: {}) {
+                    NavigationLink(destination: OfferDetailsScreen()) {
+                        OfferRow()
+                    }.buttonStyle(PlainButtonStyle())
                 }
+                .padding()
                 
+                if(idx < data.count - 1) {
+                    HStack {}
+                        .fullSize()
+                        .frame(height: 8)
+                        .background(Color("ColdGrey5"))
+                }
             }
-            .background(Color("Grey30"))
-            .navigationBarTitle("15 предложений", displayMode: .inline)
         }
+        .navigationBarTitle("15 предложений", displayMode: .inline)
     }
 }
 

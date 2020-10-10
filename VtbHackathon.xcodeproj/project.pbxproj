@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2FFED52531D27300532FDB /* Pressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFED42531D27300532FDB /* Pressable.swift */; };
+		1C2FFEDA2531D8A000532FDB /* OfferDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFED92531D8A000532FDB /* OfferDetailsScreen.swift */; };
+		1C2FFEDF2531DA7C00532FDB /* CarParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FFEDE2531DA7C00532FDB /* CarParameter.swift */; };
 		1C88F9672530EFBC00B82761 /* TabViewDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F9662530EFBC00B82761 /* TabViewDots.swift */; };
 		1C88F9842531145500B82761 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C88F9832531145500B82761 /* Colors.xcassets */; };
 		1C88F98E25311F6700B82761 /* OffersScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C88F98D25311F6700B82761 /* OffersScreen.swift */; };
@@ -24,9 +27,6 @@
 		E496E77B2530A5BF00FBCBE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E496E7792530A5BF00FBCBE4 /* LaunchScreen.storyboard */; };
 		E496E7862530A5C000FBCBE4 /* VtbHackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E7852530A5C000FBCBE4 /* VtbHackathonTests.swift */; };
 		E496E7912530A5C000FBCBE4 /* VtbHackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E7902530A5C000FBCBE4 /* VtbHackathonUITests.swift */; };
-		E4CA1AB125319925002CE616 /* OffersScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1AB025319925002CE616 /* OffersScreen.swift */; };
-		E4CA1AB725319948002CE616 /* OffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1AB625319948002CE616 /* OffersViewModel.swift */; };
-		E4CA1ABF25319D8C002CE616 /* OfferRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1ABE25319D8C002CE616 /* OfferRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +50,9 @@
 		1044B9D9614681F9105CE8C2 /* Pods-VtbHackathon-VtbHackathonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathon-VtbHackathonUITests.release.xcconfig"; path = "Target Support Files/Pods-VtbHackathon-VtbHackathonUITests/Pods-VtbHackathon-VtbHackathonUITests.release.xcconfig"; sourceTree = "<group>"; };
 		10ECAFFF0B558875F32DA7F8 /* Pods_VtbHackathonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VtbHackathonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		170CE43537D284CDE88CD322 /* Pods-VtbHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathon.release.xcconfig"; path = "Target Support Files/Pods-VtbHackathon/Pods-VtbHackathon.release.xcconfig"; sourceTree = "<group>"; };
+		1C2FFED42531D27300532FDB /* Pressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pressable.swift; sourceTree = "<group>"; };
+		1C2FFED92531D8A000532FDB /* OfferDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsScreen.swift; sourceTree = "<group>"; };
+		1C2FFEDE2531DA7C00532FDB /* CarParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarParameter.swift; sourceTree = "<group>"; };
 		1C88F9662530EFBC00B82761 /* TabViewDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewDots.swift; sourceTree = "<group>"; };
 		1C88F9832531145500B82761 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1C88F98D25311F6700B82761 /* OffersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersScreen.swift; sourceTree = "<group>"; };
@@ -76,9 +79,7 @@
 		E496E78C2530A5C000FBCBE4 /* VtbHackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VtbHackathonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E496E7902530A5C000FBCBE4 /* VtbHackathonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VtbHackathonUITests.swift; sourceTree = "<group>"; };
 		E496E7922530A5C000FBCBE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4CA1AB025319925002CE616 /* OffersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersScreen.swift; sourceTree = "<group>"; };
 		E4CA1AB625319948002CE616 /* OffersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewModel.swift; sourceTree = "<group>"; };
-		E4CA1ABE25319D8C002CE616 /* OfferRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +125,8 @@
 			children = (
 				1C88F9662530EFBC00B82761 /* TabViewDots.swift */,
 				1C88F9B42531238B00B82761 /* OfferRow.swift */,
+				1C2FFED42531D27300532FDB /* Pressable.swift */,
+				1C2FFEDE2531DA7C00532FDB /* CarParameter.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			children = (
 				E496E76F2530A5BD00FBCBE4 /* MainScreen.swift */,
 				1C88F98D25311F6700B82761 /* OffersScreen.swift */,
+				1C2FFED92531D8A000532FDB /* OfferDetailsScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -481,9 +485,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E496E76C2530A5BD00FBCBE4 /* AppDelegate.swift in Sources */,
+				1C2FFEDF2531DA7C00532FDB /* CarParameter.swift in Sources */,
 				E496E76E2530A5BD00FBCBE4 /* SceneDelegate.swift in Sources */,
 				1C88F98E25311F6700B82761 /* OffersScreen.swift in Sources */,
+				1C2FFED52531D27300532FDB /* Pressable.swift in Sources */,
 				1CDDBB9C25313F5500551D20 /* Extensions.swift in Sources */,
+				1C2FFEDA2531D8A000532FDB /* OfferDetailsScreen.swift in Sources */,
 				1C88F9B52531238B00B82761 /* OfferRow.swift in Sources */,
 				E496E7732530A5BD00FBCBE4 /* VtbHackathon.xcdatamodeld in Sources */,
 				E496E7702530A5BD00FBCBE4 /* MainScreen.swift in Sources */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainScreen: View {
-
+    
     enum Screen: Int {
         case Favorites, Main, Profile
     }
@@ -29,10 +29,10 @@ struct MainScreen: View {
                 VStack {
                     Text("Избранное")
                 }
-                
                 .tag(Screen.Favorites)
                 
                 // Main
+                
                 VStack {
                     Text("Нажмите, чтобы\nопределить машину")
                         .fontWeight(.semibold)
@@ -40,13 +40,14 @@ struct MainScreen: View {
                         .padding(.horizontal, 30)
                         .padding(.bottom, 48)
                         .multilineTextAlignment(.center)
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        Image("CameraButton")
+                    
+                    Pressable(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                        NavigationLink(destination: OffersScreen()) {
+                            Image("CameraButton")
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
-                    .animation(.easeInOut(duration: 0.3))
-                    .buttonStyle(ScaleButtonStyle())
-				}
-                
+                }
                 .tag(Screen.Main)
                 
                 
@@ -58,21 +59,10 @@ struct MainScreen: View {
             }
             .padding(.bottom, 80)
             .tabViewStyle(PageTabViewStyle())
-            .overlay(TabViewDots(count: 3, currentIndex: currentScreen.rawValue), alignment: .bottom)
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
-            //.navigationBarTitle(titles[currentScreen] ?? "", displayMode: .inline)
-		}.onAppear {
-			UIScrollView.appearance().bounces = false
-		}
-        
-    }
-}
-
-struct ScaleButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .scaleEffect(configuration.isPressed ? 0.9 : 1)
-            .opacity(configuration.isPressed ? 0.3 : 1)
+            .navigationBarTitle(titles[currentScreen] ?? "", displayMode: .inline)
+            .overlay(TabViewDots(count: 3, currentIndex: currentScreen.rawValue), alignment: .top)
+        }
     }
 }
 

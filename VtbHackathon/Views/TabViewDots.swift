@@ -15,7 +15,6 @@ struct TabViewDots: View {
                     .id(index)
             }
         }
-        .padding(.bottom, 50)
     }
 }
 
