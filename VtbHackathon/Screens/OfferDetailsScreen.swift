@@ -131,6 +131,9 @@ struct OfferDetailsScreen: View {
         .onChange(of: viewModel.initialFee, perform: { value in
             viewModel.getCalculation()
         })
+        .onChange(of: viewModel.selectedSpecialConditions, perform: { value in
+            viewModel.getCalculation()
+        })
         .navigationBarTitle("\(model.brand.titleRus) \(model.titleRus)", displayMode: .inline)
         
     }
