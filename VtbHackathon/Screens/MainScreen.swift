@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MainScreen: View {
-
-	@State private var image: UIImage?
-
-	@State private var didTapCapture: Bool = false
+    
+    @State private var image: UIImage?
+    
+    @State private var didTapCapture: Bool = false
     
     enum Screen: Int {
         case Favorites, Main, Profile
@@ -48,7 +48,7 @@ struct MainScreen: View {
                         .multilineTextAlignment(.center)
                     
                     Pressable(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-						NavigationLink(destination: CustomCameraView(brand: brand, image: $image)/*OffersScreen(brand: brand)*/) {
+                        NavigationLink(destination: CustomCameraView(brand: brand, image: $image)/*OffersScreen(brand: brand)*/) {
                             Image("CameraButton")
                         }
                         .buttonStyle(PlainButtonStyle())
@@ -67,6 +67,14 @@ struct MainScreen: View {
             .tabViewStyle(PageTabViewStyle())
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
             .navigationBarTitle(titles[currentScreen] ?? "", displayMode: .inline)
+            .navigationBarItems(
+                leading: Image("StarSolid")
+                    .renderingMode(.template)
+                    .foregroundColor(currentScreen != .Favorites ? Color("Blue60") : Color("Some")),
+                trailing: Image("PersonSolid")
+                    .renderingMode(.template)
+                    .foregroundColor(currentScreen != .Profile ? Color("Blue60") : Color("Some"))
+            )
             .overlay(TabViewDots(count: 3, currentIndex: currentScreen.rawValue), alignment: .top)
         }
     }
