@@ -85,7 +85,7 @@ struct OfferDetailsScreen: View {
                         .padding(.bottom, 60)
                 }
                 
-                FloatingTextField(label: "Первоначальный взнос", value: $viewModel.initialFee, text: "Это \((Int(viewModel.initialFee) ?? 0) / viewModel.cost * 100) % от суммы")
+                FloatingTextField(label: "Первоначальный взнос", value: $viewModel.initialFee, text: "Это \(Int(Double(viewModel.initialFee)! / Double(viewModel.cost) * 100.0)) % от суммы")
                     .keyboardType(.numberPad)
                 
                 HStack {
