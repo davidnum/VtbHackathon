@@ -10,6 +10,7 @@ import SwiftUI
 struct OfferDetailsScreen: View {
     
     @ObservedObject var viewModel = CalculatorViewModel()
+    @State var pressed = false
     
     var model: CarModelDataModel
     
@@ -96,9 +97,17 @@ struct OfferDetailsScreen: View {
                 
                 CreditSummaryItem(label: "Ежемесячный платеж", text: "\(viewModel.result?.payment.formattedWithSeparator ?? "0") ₽")
                     .padding(.top, 24)
-                
-                PrimaryButton(text: "Оформить заявку", action: {})
-                    .padding(.top, 24)
+                NavigationLink(
+                    destination: LoanScreen(),
+                    isActive: $pressed) {
+                    PrimaryButton(text: "Оформить заявку", action: {
+                        pressed = true
+                    })
+                        .padding(.top, 24)
+                }
+              
+                    
+               
                 
             }
             .padding()
@@ -113,5 +122,6 @@ struct OfferDetailsScreen: View {
             viewModel.getCalculation()
         })
         .navigationBarTitle("\(model.brand.titleRus) \(model.titleRus)", displayMode: .inline)
+        
     }
 }
