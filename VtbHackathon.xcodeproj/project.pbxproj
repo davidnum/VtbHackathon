@@ -43,7 +43,6 @@
 		E4CA1B072531F45D002CE616 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1B062531F45D002CE616 /* SplashViewModel.swift */; };
 		E4CA1B122531FA99002CE616 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1B112531FA99002CE616 /* ApiService.swift */; };
 		E4CA1B172531FEE5002CE616 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1B162531FEE5002CE616 /* SplashScreen.swift */; };
-		E4CA1B2C25324B7B002CE616 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1B2B25324B7B002CE616 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +111,6 @@
 		E4CA1B062531F45D002CE616 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		E4CA1B112531FA99002CE616 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		E4CA1B162531FEE5002CE616 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		E4CA1B2B25324B7B002CE616 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +224,6 @@
 		E496E76A2530A5BD00FBCBE4 /* VtbHackathon */ = {
 			isa = PBXGroup;
 			children = (
-				E4CA1B2A25324B6B002CE616 /* Extensions */,
 				E4CA1AE52531CCF4002CE616 /* DataModels */,
 				E4CA1ADC2531C10D002CE616 /* Services */,
 				E4CA1AB525319936002CE616 /* ViewModels */,
@@ -300,14 +297,6 @@
 				1C7C0FB225325DF00029D326 /* CalculatorVariant.swift */,
 			);
 			path = DataModels;
-			sourceTree = "<group>";
-		};
-		E4CA1B2A25324B6B002CE616 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E4CA1B2B25324B7B002CE616 /* UIImage+Extension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -561,7 +550,6 @@
 				1C2FFED52531D27300532FDB /* Pressable.swift in Sources */,
 				1C7C0FBD25327CDD0029D326 /* CalculatorViewModel.swift in Sources */,
 				1C7C0FB325325DF00029D326 /* CalculatorVariant.swift in Sources */,
-				E4CA1B2C25324B7B002CE616 /* UIImage+Extension.swift in Sources */,
 				1CDDBB9C25313F5500551D20 /* Extensions.swift in Sources */,
 				E4CA1B072531F45D002CE616 /* SplashViewModel.swift in Sources */,
 				1C2FFEDA2531D8A000532FDB /* OfferDetailsScreen.swift in Sources */,

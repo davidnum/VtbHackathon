@@ -22,13 +22,17 @@ struct SplashScreen: View {
 	var body: some View {
 		NavigationView {
 			VStack {
-					Text("")
-				ProgressView()
+                if(viewModel.error) {
+                    Text("Произошла ошибка")
+                }
+                if viewModel.loading {
+                    ProgressView()
+                }
             }.fullScreenCover(isPresented: $viewModel.navigated) {
                 MainScreen(brand: viewModel.cars[0])
             }
 			.onAppear {
-				viewModel.getCars()
+				viewModel.getInitialData()
 			}
 		}
 	}

@@ -23,17 +23,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		// Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
 		// Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-		let viewModel = SplashViewModel(apiService: ApiService.shared)
+		let viewModel = SplashViewModel()
 		let contentView = SplashScreen()
 			.environment(\.managedObjectContext, context)
 			.environmentObject(viewModel)
 
-		let api = ApiService.shared
-		let image = UIImage(named: "CarTest")!.toString()
+		// let api = ApiService.shared
+		// let image = UIImage(named: "CarTest")!.toString()
 		//let body = "\"\(image.base64EncodedString(options: .endLineWithLineFeed))\"".data(using: .utf8)!
-		api.recognizeCar(by: image ?? "") { _ in
+		// api.recognizeCar(by: image ?? "") { _ in
 			
-		}
+		// }
 
 		// Use a UIHostingController as window root view controller.
 		if let windowScene = scene as? UIWindowScene {

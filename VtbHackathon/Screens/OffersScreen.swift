@@ -9,6 +9,8 @@ import SwiftUI
 
 struct OffersScreen: View {
     
+    @EnvironmentObject var splashViewModel: SplashViewModel
+    
     var brand: CarBrandDataModel
     
     init(brand: CarBrandDataModel) {
@@ -25,7 +27,7 @@ struct OffersScreen: View {
         ScrollView {
             ForEach(Array(brand.models!.enumerated()), id: \.offset) { idx, model in
                 Pressable(action: {}) {
-                    NavigationLink(destination: OfferDetailsScreen(model: model)) {
+                    NavigationLink(destination: OfferDetailsScreen(model: model, settings: splashViewModel.settings!)) {
                         OfferRow(model: model)
                     }.buttonStyle(PlainButtonStyle())
                 }

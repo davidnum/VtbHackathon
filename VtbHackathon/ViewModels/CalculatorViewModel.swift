@@ -12,9 +12,10 @@ class CalculatorViewModel: ObservableObject {
     
     @Published var specialConditions: [SpecialCondition] = []
     @Published var selectedSpecialConditions: [String] = []
-    @Published var initialFee: Int = 0
+    @Published var initialFee: String = ""
     @Published var cost: Int = 0
-    @Published var term: Int = 5
+    @Published var term: Double = 5
+
     
     // residualPayment
     // settingsName

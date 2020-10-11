@@ -9,10 +9,20 @@ import SwiftUI
 
 struct OfferDetailsScreen: View {
     
-    @State var creditTerm: Double = 5
-    @State var initialFee: String = ""
+    @ObservedObject var viewModel = CalculatorViewModel()
     
     var model: CarModelDataModel
+    
+    init(model: CarModelDataModel, settings: CalculatorSettings) {
+        self.model = model
+        viewModel.cost = model.minPrice
+        viewModel.initialFee = String(settings.initialFee)
+        viewModel.specialConditions = settings.specialConditions
+        viewModel.selectedSpecialConditions = settings.specialConditions
+            .filter { $0.isChecked }
+            .map { $0.name }
+        
+    }
     
     var body: some View {
         ScrollView {
@@ -68,15 +78,15 @@ struct OfferDetailsScreen: View {
                         .font(.system(size: 14.0))
                         .padding(.bottom, 1)
                         .fullSize(alignment: .leading)
-                    Text(String(format: "%g", creditTerm))
+                    Text(String(format: "%g", viewModel.term))
                         .foregroundColor(Color("Grey90"))
                         .font(.system(size: 16.0))
                         .fullSize(alignment: .leading)
-                    CustomSlider(value: $creditTerm, bounds: 1...7, step: 1)
+                    CustomSlider(value: $viewModel.term, bounds: 1...7, step: 1)
                         .padding(.bottom, 60)
                 }
                 
-                FloatingTextField(label: "Первоначальный взнос", value: $initialFee, text: "Это 20% от суммы")
+                FloatingTextField(label: "Первоначальный взнос", value: $viewModel.initialFee, text: "Это \(viewModel.cost / 100 * Int(viewModel.initialFee)!) от суммы")
                     .keyboardType(.numberPad)
                 
                 HStack {
