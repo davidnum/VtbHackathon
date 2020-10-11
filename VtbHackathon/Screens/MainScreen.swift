@@ -48,7 +48,10 @@ struct MainScreen: View {
                         .multilineTextAlignment(.center)
                     
                     Pressable(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        NavigationLink(destination: CustomCameraView(brand: brand, image: $image)/*OffersScreen(brand: brand)*/) {
+                        NavigationLink(destination:
+                                        //CustomCameraView(brand: brand, image: $image)
+                                       OffersScreen(brand: brand)
+                        ) {
                             Image("CameraButton")
                         }
                         .buttonStyle(PlainButtonStyle())

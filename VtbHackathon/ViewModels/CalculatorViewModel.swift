@@ -18,6 +18,20 @@ class CalculatorViewModel: ObservableObject {
     
     @Published var result: CalculatorResult?
     
+    func isConditionSelected(cond: SpecialCondition) -> Bool {
+        return selectedSpecialConditions.contains(cond.id)
+    }
+    
+    
+    func checkCondition(_ cond: SpecialCondition) {
+        if(isConditionSelected(cond: cond)) {
+            if let index = selectedSpecialConditions.firstIndex(of: cond.id) {
+               selectedSpecialConditions.remove(at: index)
+            }
+        } else {
+            selectedSpecialConditions.append(cond.id)
+        }
+    }
     
     func getCalculation() {
         loading = true

@@ -73,6 +73,16 @@ struct OfferDetailsScreen: View {
                     .fullSize(alignment: .leading)
                 
                 VStack {
+                    ForEach(viewModel.specialConditions, id: \.id) { cond in
+                        CustomCheckbox(action: {
+                            withAnimation {
+                                viewModel.checkCondition(cond)
+                            }
+                        }, checked: viewModel.isConditionSelected(cond: cond), label: cond.name)
+                    }
+                }.padding(.bottom, 16)
+                
+                VStack {
                     Text("Срок кредита (от 1 года до 7)")
                         .foregroundColor(Color("Grey50"))
                         .font(.system(size: 14.0))

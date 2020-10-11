@@ -9,15 +9,14 @@ import SwiftUI
 
 struct CustomCheckbox: View {
     
-    @Binding var checked: Bool
+    typealias Action = () -> Void
+    
+    var action: Action
+    var checked: Bool
     var label: String
     
     var body: some View {
-        Pressable(action: {
-            withAnimation {
-                checked.toggle()
-            }
-        }) {
+        Pressable(action: action) {
             HStack {
                 ZStack {
                     Image("CheckboxInactive")
@@ -30,23 +29,24 @@ struct CustomCheckbox: View {
                 Text(label)
                     .font(.system(size: 14))
                     .foregroundColor(Color("Grey90"))
+                    .fixedSize(horizontal: false, vertical: true)
             }
-        }
+        }.fullSize(alignment: .leading)
     }
 }
 
 
-struct CustomCheckbox_Previews2: View {
-    
-    @State var checked = false
-    
-    var body: some View {
-        CustomCheckbox(checked: $checked, label: "Checkbox")
-    }
-}
-
-struct CustomCheckbox_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomCheckbox_Previews2()
-    }
-}
+//struct CustomCheckbox_Previews2: View {
+//
+//    @State var checked = false
+//
+//    var body: some View {
+//        CustomCheckbox(checked: $checked, label: "Checkbox")
+//    }
+//}
+//
+//struct CustomCheckbox_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CustomCheckbox_Previews2()
+//    }
+//}

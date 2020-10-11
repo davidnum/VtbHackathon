@@ -18,7 +18,7 @@ class LoanViewMode: ObservableObject {
             [weak self] result in
             self?.loading = false
             switch result {
-            case .success(let _):
+            case .success( _):
                 self?.navigated = true
             case .failure(let error):
                 print("Error \(error)")
