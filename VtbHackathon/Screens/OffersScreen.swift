@@ -41,7 +41,7 @@ struct OffersScreen: View {
                 }
             }
         }
-        .navigationBarTitle("15 предложений", displayMode: .inline)
+        .navigationBarTitle("\(brand.currentModelsTotal) предложения", displayMode: .inline)
     }
 }
 

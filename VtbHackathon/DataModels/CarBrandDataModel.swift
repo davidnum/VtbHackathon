@@ -20,4 +20,6 @@ struct CarBrandDataModel: Decodable {
 	let absentee: Bool
 
 	let models: [CarModelDataModel]?
+    
+    let currentModelsTotal: Int
 }
