@@ -20,12 +20,17 @@ struct CustomCameraView: View {
 	var body: some View {
 		ZStack(alignment: .bottom) {
 			CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture)
+			NavigationLink(destination: OffersScreen(brand: brand)) {
+				Image("Capturer")
+			}
 			VStack {
-				Pressable(action: {}) {
+				Pressable(action: {
+					self.didTapCapture = true
+				}) {
 					NavigationLink(destination: OffersScreen(brand: brand)) {
 						Image("Capturer")
 					}
-				}//.sheet(item: <#T##Binding<Identifiable?>#>, content: <#T##(Identifiable) -> View#>)
+				}
 				Text("Наведите камеру \nна машину")
 					.foregroundColor(Color.white)
 					.fontWeight(.semibold)
@@ -103,7 +108,6 @@ class CustomCameraController: UIViewController {
 
 		let settings = AVCapturePhotoSettings()
 		photoOutput?.capturePhoto(with: settings, delegate: delegate!)
-
 	}
 
 	override func viewDidLoad() {

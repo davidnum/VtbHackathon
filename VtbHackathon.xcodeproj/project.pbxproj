@@ -29,6 +29,9 @@
 		3C86B2F9977E2BB94E320C9C /* Pods_VtbHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03FE0A830798D2D0B06C99B /* Pods_VtbHackathon.framework */; };
 		D0045A4A7AAEED834CB519F4 /* Pods_VtbHackathon_VtbHackathonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5AE1137E3633D66B5029F /* Pods_VtbHackathon_VtbHackathonUITests.framework */; };
 		D21CE7193D1D4AE07FD25371 /* Pods_VtbHackathonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ECAFFF0B558875F32DA7F8 /* Pods_VtbHackathonTests.framework */; };
+		E44AEEB82532F8F80063479E /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AEEB72532F8F80063479E /* ModalView.swift */; };
+		E44AEEC02532FA1C0063479E /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AEEBF2532FA1C0063479E /* ApiService.swift */; };
+		E4529F81253276CD006EE944 /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4529F80253276CD006EE944 /* CameraScreen.swift */; };
 		E496E76C2530A5BD00FBCBE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E76B2530A5BD00FBCBE4 /* AppDelegate.swift */; };
 		E496E76E2530A5BD00FBCBE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E76D2530A5BD00FBCBE4 /* SceneDelegate.swift */; };
 		E496E7702530A5BD00FBCBE4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496E76F2530A5BD00FBCBE4 /* MainScreen.swift */; };
@@ -43,7 +46,6 @@
 		E4CA1AFA2531DE9A002CE616 /* CarModelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1AF92531DE9A002CE616 /* CarModelDataModel.swift */; };
 		E4CA1AFF2531DED3002CE616 /* BodyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1AFE2531DED3002CE616 /* BodyDataModel.swift */; };
 		E4CA1B072531F45D002CE616 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1B062531F45D002CE616 /* SplashViewModel.swift */; };
-		E4CA1B122531FA99002CE616 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1B112531FA99002CE616 /* ApiService.swift */; };
 		E4CA1B172531FEE5002CE616 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA1B162531FEE5002CE616 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,9 @@
 		71B5AE1137E3633D66B5029F /* Pods_VtbHackathon_VtbHackathonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VtbHackathon_VtbHackathonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03FE0A830798D2D0B06C99B /* Pods_VtbHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VtbHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E02FA9BB2C045DD19FFA5A /* Pods-VtbHackathonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VtbHackathonTests.debug.xcconfig"; path = "Target Support Files/Pods-VtbHackathonTests/Pods-VtbHackathonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E44AEEB72532F8F80063479E /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		E44AEEBF2532FA1C0063479E /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		E4529F80253276CD006EE944 /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
 		E496E7682530A5BD00FBCBE4 /* VtbHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VtbHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E496E76B2530A5BD00FBCBE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E496E76D2530A5BD00FBCBE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +118,6 @@
 		E4CA1AF92531DE9A002CE616 /* CarModelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelDataModel.swift; sourceTree = "<group>"; };
 		E4CA1AFE2531DED3002CE616 /* BodyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyDataModel.swift; sourceTree = "<group>"; };
 		E4CA1B062531F45D002CE616 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
-		E4CA1B112531FA99002CE616 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		E4CA1B162531FEE5002CE616 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +171,7 @@
 				1C2FFEFA25322E5A00532FDB /* CreditSummaryItem.swift */,
 				1C2FFEFF2532316E00532FDB /* PrimaryButton.swift */,
 				1C7C0FB7253260140029D326 /* CustomCheckbox.swift */,
+				E44AEEB72532F8F80063479E /* ModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				1C88F98D25311F6700B82761 /* OffersScreen.swift */,
 				1C2FFED92531D8A000532FDB /* OfferDetailsScreen.swift */,
 				E4CA1B162531FEE5002CE616 /* SplashScreen.swift */,
+				E4529F80253276CD006EE944 /* CameraScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -284,7 +290,7 @@
 		E4CA1ADC2531C10D002CE616 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E4CA1B112531FA99002CE616 /* ApiService.swift */,
+				E44AEEBF2532FA1C0063479E /* ApiService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -546,9 +552,9 @@
 			files = (
 				E4CA1B172531FEE5002CE616 /* SplashScreen.swift in Sources */,
 				E4CA1AE72531CD31002CE616 /* CountryDataModel.swift in Sources */,
+				E4529F81253276CD006EE944 /* CameraScreen.swift in Sources */,
 				E4CA1AFF2531DED3002CE616 /* BodyDataModel.swift in Sources */,
 				1C7C0FB8253260140029D326 /* CustomCheckbox.swift in Sources */,
-				E4CA1B122531FA99002CE616 /* ApiService.swift in Sources */,
 				E496E76C2530A5BD00FBCBE4 /* AppDelegate.swift in Sources */,
 				1C2FFEDF2531DA7C00532FDB /* CarParameter.swift in Sources */,
 				E496E76E2530A5BD00FBCBE4 /* SceneDelegate.swift in Sources */,
@@ -568,8 +574,10 @@
 				1CEBA4E1253307F8004B9233 /* CalculatorDataModel.swift in Sources */,
 				1C7C0FAE25325D600029D326 /* SpecialCondition.swift in Sources */,
 				1C2FFEFB25322E5A00532FDB /* CreditSummaryItem.swift in Sources */,
+				E44AEEB82532F8F80063479E /* ModalView.swift in Sources */,
 				1C7C0FA925325CBF0029D326 /* CalculatorSettings.swift in Sources */,
 				1C2FFEEB2531F53B00532FDB /* CustomSlider.swift in Sources */,
+				E44AEEC02532FA1C0063479E /* ApiService.swift in Sources */,
 				1C2FFF002532316E00532FDB /* PrimaryButton.swift in Sources */,
 				1C2FFEF32532237800532FDB /* FloatingTextField.swift in Sources */,
 				1C88F9672530EFBC00B82761 /* TabViewDots.swift in Sources */,
