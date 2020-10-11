@@ -20,8 +20,7 @@ struct OfferDetailsScreen: View {
         viewModel.specialConditions = settings.specialConditions
         viewModel.selectedSpecialConditions = settings.specialConditions
             .filter { $0.isChecked }
-            .map { $0.name }
-        
+            .map { $0.id }
     }
     
     var body: some View {
@@ -86,16 +85,16 @@ struct OfferDetailsScreen: View {
                         .padding(.bottom, 60)
                 }
                 
-                FloatingTextField(label: "Первоначальный взнос", value: $viewModel.initialFee, text: "Это \(viewModel.cost / 100 * Int(viewModel.initialFee)!) от суммы")
+                FloatingTextField(label: "Первоначальный взнос", value: $viewModel.initialFee, text: "Это \((Int(viewModel.initialFee) ?? 0) / viewModel.cost * 100) % от суммы")
                     .keyboardType(.numberPad)
                 
                 HStack {
-                    CreditSummaryItem(label: "Ставка по кредиту", text: "2%")
-                    CreditSummaryItem(label: "Сумма кредита", text: "1 356 000 ₽")
+                    CreditSummaryItem(label: "Ставка по кредиту", text: String(viewModel.result?.contractRate ?? 0) )
+                    CreditSummaryItem(label: "Сумма кредита", text: "\(viewModel.result?.loanAmount.formattedWithSeparator ?? "0") ₽")
                 }
                 .padding(.top, 24)
                 
-                CreditSummaryItem(label: "Ежемесячный платеж", text: "57 755 ₽")
+                CreditSummaryItem(label: "Ежемесячный платеж", text: "\(viewModel.result?.payment.formattedWithSeparator ?? "0") ₽")
                     .padding(.top, 24)
                 
                 PrimaryButton(text: "Оформить заявку", action: {})
@@ -104,6 +103,15 @@ struct OfferDetailsScreen: View {
             }
             .padding()
         }
+        .onAppear(perform: {
+            viewModel.getCalculation()
+        })
+        .onChange(of: viewModel.term, perform: { value in
+            viewModel.getCalculation()
+        })
+        .onChange(of: viewModel.initialFee, perform: { value in
+            viewModel.getCalculation()
+        })
         .navigationBarTitle("\(model.brand.titleRus) \(model.titleRus)", displayMode: .inline)
     }
 }

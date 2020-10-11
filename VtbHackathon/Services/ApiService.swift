@@ -68,4 +68,31 @@ final class ApiService: ApiServiceProtocol {
                 completion(.success(settings))
             }
     }
+    
+    func getCalculation(cost: Int, initialFee: Int, specialConditions: [String], term: Int, completion: @escaping (Result<CalculatorResult, Error>) -> Void) {
+        let params: [String: Any] = [
+            "clientTypes": [],
+            "cost": cost,
+            "initialFee": initialFee,
+            "kaskoValue": 0,
+            "language": lang,
+            "residualPayment": cost - initialFee,
+            "settingsName": defaultCalculator,
+            "specialConditions": specialConditions,
+            "term": term
+           ]
+        
+        AF.request("\(baseUrl)calculate",
+                   method: .post,
+                   parameters: params,
+                   encoding: JSONEncoding.default,
+                   headers: headers)
+            .responseDecodable(of: CalculatorDataModel.self) { response in
+                guard let value = response.value else {
+                    completion(.failure(response.error!))
+                    return
+                }
+                completion(.success(value.result))
+            }
+    }
 }
