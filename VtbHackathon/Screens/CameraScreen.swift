@@ -20,9 +20,6 @@ struct CustomCameraView: View {
 	var body: some View {
 		ZStack(alignment: .bottom) {
 			CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture)
-			NavigationLink(destination: OffersScreen(brand: brand)) {
-				Image("Capturer")
-			}
 			VStack {
 				Pressable(action: {
 					self.didTapCapture = true
