@@ -21,5 +21,5 @@ struct CarBrandDataModel: Decodable {
 
 	let models: [CarModelDataModel]?
     
-    let currentModelsTotal: Int
+    let currentModelsTotal: Int?
 }
