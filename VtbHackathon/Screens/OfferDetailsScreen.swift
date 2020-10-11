@@ -48,6 +48,7 @@ struct OfferDetailsScreen: View {
                 }
             }
             .padding()
+            
             HStack {}
                 .fullSize()
                 .frame(height: 8)
@@ -80,7 +81,6 @@ struct OfferDetailsScreen: View {
                 
                 HStack {
                     CreditSummaryItem(label: "Ставка по кредиту", text: "2%")
-                    
                     CreditSummaryItem(label: "Сумма кредита", text: "1 356 000 ₽")
                 }
                 .padding(.top, 24)
