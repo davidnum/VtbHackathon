@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct MainScreen: View {
+
+	@State private var image: UIImage?
+
+	@State private var didTapCapture: Bool = false
     
     enum Screen: Int {
         case Favorites, Main, Profile
@@ -44,7 +48,7 @@ struct MainScreen: View {
                         .multilineTextAlignment(.center)
                     
                     Pressable(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        NavigationLink(destination: OffersScreen(brand: brand)) {
+						NavigationLink(destination: CustomCameraView(brand: brand, image: $image)/*OffersScreen(brand: brand)*/) {
                             Image("CameraButton")
                         }
                         .buttonStyle(PlainButtonStyle())

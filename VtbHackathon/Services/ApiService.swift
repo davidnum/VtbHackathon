@@ -40,22 +40,27 @@ final class ApiService: ApiServiceProtocol {
                 completion(.success(cars["list"] ?? []))
             }
     }
-    
-    func recognizeCar(by image: String, completion: @escaping (Result<[String: [String: Double]], Error>) -> Void) {
-        AF.request("https://gw.hackathon.vtb.ru/vtb/hackathon/car-recognize",
-                   method: .post,
-                   parameters: ["content": image],
-                   encoding: JSONEncoding.default,
-                   headers: headers).responseDecodable(of: [String: [String: Double]].self) { response in
-                    guard let probabilities = response.value else {
+
+	func recognizeCar(by image: String, completion: @escaping (Result<[String: Double], Error>) -> Void) {
+		let headers: HTTPHeaders = [
+			"x-ibm-client-id": "e0a9ee9438e7c78ec75742a2c331422f",
+			"Accept": "application/json",
+			"Content-Type": "application/json"
+		]
+		AF.request("https://gw.hackathon.vtb.ru/vtb/hackathon/car-recognize",
+				   method: .post,
+				   parameters: ["content": image],
+				   encoding: JSONEncoding.default,
+				   headers: headers).responseDecodable(of: [String: [String: Double]].self) { response in
+					guard let probabilities = response.value else {
                         completion(.failure(response.error!))
-                        return
-                    }
-                    // completion(.success(probabilities["probabilities"]?.sorted(by: response.value > $1.value)))
-                   }
-    }
-    
-    func getCalculatorSettings(completion: @escaping (Result<CalculatorSettings, AFError>) -> Void) {
+						return
+					}
+					completion(.success(probabilities["probabilities"] ?? [:]))
+				}
+	}
+
+	func getCalculatorSettings(completion: @escaping (Result<CalculatorSettings, AFError>) -> Void) {
         AF.request("\(baseUrl)settings?name=\(defaultCalculator)&language=\(lang)",
                    method: .get,
                    encoding: JSONEncoding.default,
